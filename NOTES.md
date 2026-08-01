@@ -24,8 +24,10 @@ operating business yet — see assumptions below.
      land on) is purchased, and update `robots.txt`, `sitemap.xml`, every
      canonical tag, and every JSON-LD `url`/`@id` field if the domain differs
      from what's hardcoded now.
-  4. Swap the placeholder GA4 ID (`G-XXXXXXXXXX`) for a real measurement ID once
-     you've created the GA4 property.
+  4. ~~Swap the placeholder GA4 ID~~ — done. The site now uses **Google Tag
+     Manager** (`GTM-N2CL45SZ`) instead of a hardcoded gtag.js snippet — see
+     below. Configure the actual GA4 tag inside the GTM container (Tags → New →
+     GA4 Configuration → your measurement ID → trigger: All Pages).
 
 ## Pre-launch TODOs
 
@@ -37,9 +39,12 @@ operating business yet — see assumptions below.
   boogmasterjones@gmail.com** — this can't be set from the HTML/form markup itself.
   If not deployed to Netlify, swap the form action to a Formspree endpoint instead
   (requires creating a Formspree account first).
-- **GA4 measurement ID is a placeholder** (`G-XXXXXXXXXX`) in every page's `<head>`.
-  Replace with a real GA4 property ID before launch (same position in every page —
-  immediately after the opening `<head>` tag, per Google's placement requirement).
+- **Tracking is now Google Tag Manager, not a raw GA4 snippet.** Every page's
+  `<head>` has the GTM container script (`GTM-N2CL45SZ`) as high as possible,
+  and the noscript iframe fallback sits immediately after `<body>` — both per
+  Google's own placement instructions. GA4 itself isn't wired up yet; add a
+  GA4 Configuration tag inside the GTM container (with an "All Pages" trigger)
+  to start actually collecting analytics.
 - **Google Search Console** not yet set up — verify via the **URL prefix** property
   type (not "Domain") once the site has a real domain, then submit `sitemap.xml`.
 - **Canonical URLs and JSON-LD `url`/`@id` fields assume the domain
@@ -135,16 +140,17 @@ A full site-wide SEO audit found and fixed:
   `<title>` tag alone for that phrase, while keeping the brand voice intact.
 - **`sitemap.xml` `lastmod` dates** bumped to the date of this edit pass (all 14
   entries had been stuck on the initial build date regardless of later changes).
-- **Not changed:** GA4 tracking is intentionally absent from `404.html` (noindex,
-  not a real crawlable page) — flagged in the audit as optional, not fixed, since
-  it's a minor diagnostic nicety rather than an SEO issue.
+- **Update:** GTM tracking was later added to `404.html` too (see the GTM section
+  above) — worth having now since GTM makes it easy to track broken-link hits
+  specifically, not just page views.
 
 ## Verified
 
 - [x] All 5 service pages + 7 location pages built with differentiated content
       (local landmarks, housing-stock notes, climate notes specific to each city)
 - [x] Homepage, `sitemap.xml`, `robots.txt`, `404.html` present and cross-referenced
-- [x] GA4 snippet present on every page (placeholder ID, see TODO above)
+- [x] Google Tag Manager (`GTM-N2CL45SZ`) present on all 15 pages including
+      `404.html` — GA4 itself still needs a Configuration tag added inside GTM
 - [x] No fabricated trust signals anywhere (schema or visible copy)
 - [x] All 5 service pages use real project photos (hero + header + homepage
       service card, plus 4 real material photos on the patio page). All 8
