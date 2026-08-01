@@ -4,6 +4,32 @@ Speculative rank-and-rent lead-gen site for tile installation in Hattiesburg, MS
 built from `- - RANK AND RENT SITE TEMPLATE- -/CLAUDE.md`. Not tied to a real
 operating business yet — see assumptions below.
 
+## Deployment (Netlify)
+
+- Repo is on GitHub at `https://github.com/boogmasterjones/tilemissouri.git`
+  (pushed to `main`). Note the repo name is spelled "tilemissouri" — same
+  Mississippi/Missouri mix-up as the earlier brand-name back-and-forth; harmless
+  since it's just the repo slug and doesn't appear anywhere on the live site, but
+  flagging in case you want to rename it.
+- Added `.gitignore` excluding `pictures/` (9.2 MB of original, unoptimized
+  source photos — not served by the site, only `assets/photos/` is) and OS junk
+  files. `.claude/settings.local.json` also excluded since local permission
+  settings shouldn't be version-controlled.
+- Added `netlify.toml`: `publish = "."` (root, no build step) plus long cache
+  headers for `/assets/*`, `/css/*`, `/js/*`.
+- **Still needed from you in the Netlify dashboard** (can't be done from code):
+  1. Connect the GitHub repo in Netlify (New site from Git → pick this repo →
+     branch `main` → no build command → publish directory `.`).
+  2. **Site settings → Forms → Form notifications → add notification → Email
+     notification → boogmasterjones@gmail.com** — required for the lead-capture
+     form on the homepage and `contact.html` to actually notify anyone.
+  3. Set a custom domain once `tilemississippi.com` (or whichever domain you
+     land on) is purchased, and update `robots.txt`, `sitemap.xml`, every
+     canonical tag, and every JSON-LD `url`/`@id` field if the domain differs
+     from what's hardcoded now.
+  4. Swap the placeholder GA4 ID (`G-XXXXXXXXXX`) for a real measurement ID once
+     you've created the GA4 property.
+
 ## Pre-launch TODOs
 
 - **Lead form backend.** The homepage and `contact.html` forms use
