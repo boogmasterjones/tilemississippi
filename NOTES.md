@@ -6,11 +6,8 @@ operating business yet — see assumptions below.
 
 ## Deployment (Netlify)
 
-- Repo is on GitHub at `https://github.com/boogmasterjones/tilemissouri.git`
-  (pushed to `main`). Note the repo name is spelled "tilemissouri" — same
-  Mississippi/Missouri mix-up as the earlier brand-name back-and-forth; harmless
-  since it's just the repo slug and doesn't appear anywhere on the live site, but
-  flagging in case you want to rename it.
+- Repo is on GitHub at `https://github.com/boogmasterjones/tilemississippi.git`
+  (pushed to `main`, renamed from the original "tilemissouri" slug).
 - Added `.gitignore` excluding `pictures/` (9.2 MB of original, unoptimized
   source photos — not served by the site, only `assets/photos/` is) and OS junk
   files. `.claude/settings.local.json` also excluded since local permission
