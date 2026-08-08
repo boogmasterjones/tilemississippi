@@ -7,6 +7,7 @@
   --charcoal-mid: #332E29;
   --clay: #C4552E;
   --clay-dark: #A2431F;
+  --clay-light: #E08A5F; /* lighter terracotta for clay-colored TEXT on dark backgrounds (WCAG AA) */
   --slate: #5C6D66;
   --slate-dark: #445048;
   --stone: #F5F0E8;
@@ -71,12 +72,23 @@ svg {
   display: block;
 }
 
+/* <picture> wrappers (WebP source + JPG fallback) must not affect layout. */
+picture {
+  display: contents;
+}
+
 a {
   color: var(--slate-dark);
   text-decoration: none;
 }
 
 a:hover {
+  text-decoration: underline;
+}
+
+/* Text links inside running body copy carry a persistent underline so they're
+   distinguishable without relying on color alone (WCAG 1.4.1). */
+p a:not(.btn):not(.card-link) {
   text-decoration: underline;
 }
 
@@ -185,7 +197,7 @@ summary:focus-visible {
 
 .section--dark .eyebrow,
 .section--mid .eyebrow {
-  color: var(--clay);
+  color: var(--clay-light);
 }
 
 .section-head h1,
@@ -276,7 +288,7 @@ summary:focus-visible {
 .phone-link {
   font-family: var(--font-head);
   font-weight: 600;
-  color: var(--clay);
+  color: var(--clay-light);
   font-size: 1.1rem;
   letter-spacing: 0.3px;
   white-space: nowrap;
@@ -337,7 +349,7 @@ summary:focus-visible {
 }
 
 .logo strong span {
-  color: var(--clay);
+  color: var(--clay-light);
 }
 
 .logo small {
@@ -573,7 +585,7 @@ summary:focus-visible {
   gap: 8px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  color: var(--clay);
+  color: var(--clay-light);
   font-family: var(--font-head);
   font-weight: 600;
   letter-spacing: 1.5px;
