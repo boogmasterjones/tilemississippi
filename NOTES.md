@@ -81,7 +81,7 @@ operating business yet — see assumptions below.
   found, but this was not a formal trademark search. The name went through two
   earlier revisions ("Longleaf Tile Co.," then "Adroit Tile Co.") before landing
   here at the user's request — see `CLAUDE.md` Brand identity section.
-- **Phone number** is the template's fixed number, `(941) 564-5088`
+- **Phone number** is the template's fixed number, `(769) 204-2565`
   (Google Voice) — used as the live "Call now" CTA everywhere per the template's
   instructions. Replace with a real business line if/when this site is attached to
   an actual contractor.
@@ -158,7 +158,7 @@ A full site-wide SEO audit found and fixed:
       homepage location card. No placeholder images remain anywhere on the site.
 - [x] Lead-capture form present on homepage and `contact.html`, marked as needing
       the Netlify notification-email step above
-- [x] Phone number `(941) 564-5088` used consistently (header, footer, CTAs,
+- [x] Phone number `(769) 204-2565` used consistently (header, footer, CTAs,
       `tel:` links) — no placeholder/made-up number anywhere
 - [x] Verified in browser preview (desktop); see TODO to also check mobile widths
       before calling the build fully done

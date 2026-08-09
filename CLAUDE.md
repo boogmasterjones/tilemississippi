@@ -7,8 +7,8 @@ signals (no review counts, no "X years in business," no license numbers).
 
 - **Niche:** Residential tile installation
 - **Target city (hub):** Hattiesburg, MS
-- **Phone (fixed across all rank-and-rent template sites):** `(941) 564-5088` /
-  `tel:+19415645088` (Google Voice)
+- **Phone (fixed across all rank-and-rent template sites):** `(769) 204-2565` /
+  `tel:+17692042565` (Google Voice)
 - **Email:** unknown at kickoff — lead form is the secondary contact method (see
   Lead form notes below).
 
