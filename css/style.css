@@ -1223,6 +1223,41 @@ summary:focus-visible {
   margin-bottom: 1.5em;
 }
 
+/* ---------- Blog ---------- */
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-family: var(--font-head);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5em;
+}
+
+.content-block .post-meta {
+  color: var(--body-text);
+  margin-bottom: 1.5em;
+  padding-bottom: 1.2em;
+  border-bottom: 1px solid var(--border);
+}
+
+.content-block blockquote {
+  margin: 1.5em 0;
+  padding: 0.2em 1.4em;
+  border-left: 3px solid var(--clay);
+  background: var(--stone);
+  font-style: italic;
+  color: var(--ink);
+}
+
+.content-block h3 {
+  font-size: 1.15rem;
+  margin-top: 1.2em;
+}
+
 .materials-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

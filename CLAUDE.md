@@ -115,6 +115,39 @@ Same as the template's Step 4 — `services/`, `locations/` sibling dirs, `css/`
 `js/`, `index.html`, `contact.html`, `404.html`, `sitemap.xml`, `robots.txt`.
 No build step, static HTML/CSS/vanilla JS, deployable via Netlify drag-and-drop.
 
+## Blog (added post-launch)
+
+`blog.html` (hub, root-level like `contact.html`) + `blog/` sibling directory
+holding individual posts, same folder pattern as `services/`/`locations/`. "Blog"
+added to primary nav (before Contact) and to the footer's Services column, across
+all pages including the posts themselves.
+
+Each post carries `BreadcrumbList` + `BlogPosting` + `FAQPage` JSON-LD (the FAQ
+schema mirrors the visible `<details>/<summary>` content exactly, same pattern as
+service/location pages). `author`/`publisher` on `BlogPosting` is the
+`Tile Mississippi` organization, not a named person — no fabricated author bio,
+consistent with the content honesty rules below.
+
+**First 3 posts** (keyword-targeted per user request):
+- `blog/tile-repair-jackson-ms.html` — targets "tile repair jackson ms". Jackson
+  is ~90 mi from Hattiesburg, well outside the site's established ~50 mi service
+  radius (see Location research below) and is *not* one of the 7 dedicated
+  location pages. Rather than fabricate a Jackson service claim, the post is
+  genuinely educational (repair-vs-replace decision factors) and the CTA/FAQ are
+  explicit that Hattiesburg is home base and Jackson is outside the normal
+  radius, inviting an inquiry rather than promising coverage. This is a
+  deliberate honesty-preserving choice — flag before writing more posts that
+  target cities outside the established service area.
+- `blog/how-to-find-a-good-tile-contractor-hattiesburg.html` — targets "how to
+  find a good tile contractor in hattiesburg". Genuine buyer's-guide content
+  (what to ask, red flags); doesn't claim reviews/credentials for this business
+  that aren't backed up elsewhere on the site.
+- `blog/bathroom-remodeling-hattiesburg-ms.html` — targets "bathroom
+  remodeling". Deliberately avoids specific dollar figures for remodel
+  costs (no real pricing data exists to back a number) — discusses cost
+  *factors* instead and points to a quote for a specific number, consistent
+  with the no-fabricated-stats rule.
+
 ## Lead form
 
 Homepage and `contact.html` both use a Netlify Forms lead-capture form

@@ -146,6 +146,12 @@ A full site-wide SEO audit found and fixed:
 
 ## Verified
 
+- [x] Blog section added: `blog.html` hub + 3 posts in `blog/` (tile repair in
+      Jackson MS, finding a good contractor, bathroom remodeling planning guide).
+      "Blog" linked in primary nav and footer across all 19 pages now. Each post
+      has BreadcrumbList + BlogPosting + FAQPage JSON-LD, validated. `sitemap.xml`
+      updated with all 4 new URLs. See CLAUDE.md's Blog section for the honesty
+      handling on the Jackson, MS post (outside the established service radius).
 - [x] All 5 service pages + 7 location pages built with differentiated content
       (local landmarks, housing-stock notes, climate notes specific to each city)
 - [x] Homepage, `sitemap.xml`, `robots.txt`, `404.html` present and cross-referenced
